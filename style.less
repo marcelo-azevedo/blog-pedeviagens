@@ -54,7 +54,7 @@ option:checked{background: none}
 	-webkit-transition: all @segundos;
 }
 
-.center(){	
+.center(){
 	margin: 0 auto;
 	display: block;
 	float: none;
@@ -64,7 +64,7 @@ option:checked{background: none}
 
 .radius(@radio: 10px){
 	 -webkit-border-radius: @radio;
-	border-radius: @radio; 
+	border-radius: @radio;
 }
 
 /*Inicil
@@ -145,6 +145,8 @@ section{
 
 		#conteudo{
 			.column(3);
+			width: 635px;
+			margin: 0;
 
 			.artigo{
 				margin-bottom: 70px;
@@ -183,6 +185,7 @@ section{
 					color: @cp;
 					letter-spacing: 1px;
 					float: left;
+					text-align: justify;
 				}
 
 				ul{
@@ -225,7 +228,7 @@ section{
 
 				.img-artigo{
 					width: 620px;
-					height: 250px;
+					height: 245px;
 					overflow: hidden;
 					border: 3px solid @cb;
 					.radius;
@@ -249,6 +252,59 @@ section{
 
 	}
 
+}
+
+#aside{
+	.column(1);
+	float: right;
+	width: 220px;
+
+	section{
+		.clearfix;
+		background-color: #EDEDED;
+		.radius;
+		overflow: hidden;
+		margin-bottom: 40px;
+
+		h1{
+			width: 100%; height: 30px;
+			padding: 13px  0 0 30px;
+			font-family: arial, verdana;
+			font-size: 20px;
+			color: white;
+			background-color: @l;
+		}
+
+		p{
+			font-family: Arial, verdana;
+			font-size: 12px;
+			color: #797A7D;
+			margin: -10px 0 15px 0;
+		}
+
+		ul{
+			margin: 20px 30px;
+			li{
+				margin-bottom: 10px;
+				a{
+					font-family: Arial, verdana;
+					font-size: 12px;
+					color: @ct;
+					text-decoration: none;
+
+					&:hover{color: @l;}
+				}
+			}
+		}
+
+		&#face{
+			td.pls{
+				span#u_0_2{
+					font-size: 8px
+				}
+			}
+		}
+	}
 }
 
 /*Categorias*/
@@ -442,21 +498,11 @@ section{
 	color: #666;
 }
 
-#aside{
-	width: 300px;
-	float: left;
-}
-
-#aside section{
-	overflow: hidden;
-}
-
 #busca{
 	 -webkit-box-shadow: 1px 1px 1px 0px rgba(34, 34, 34, 0.4);
 	box-shadow: 1px 1px 1px 0px rgba(34, 34, 34, 0.4);
 	float: left;
 	margin: 2px 30px 0 0
- 
 }
 
 #busca input[type="text"]{
@@ -490,33 +536,6 @@ section{
 	background: #2AB3E5;
 }
 
-#aside h1{
-	width: 100%; height: 30px;
-	margin: 20px 0;
-	font-family: 'museo500', arial, verdana;
-	font-size: 22px;
-	color: #E05B04;
-	border-bottom: 2px solid #E05B04;
-
-}
-
-#aside p{
-	font-family: Arial, verdana;
-	font-size: 12px;
-	color: #797A7D;
-	margin: -10px 0 15px 0;
-}
-
-#aside ul li a{
-	font-family: Arial, verdana;
-	font-size: 12px;
-	color: #797A7D;
-	text-decoration: none;
-}
-
-#aside ul li a:hover{
-	color: #E05B04;
-}
 
 .news input[type="text"]{
 	width: 300px;

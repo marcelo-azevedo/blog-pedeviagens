@@ -3,12 +3,12 @@
 			<div id="conteudo">
 				<section>
 					<?php if (have_posts()): while (have_posts()) : the_post();?>
-						<article>		
-							<div class="artigo">	
+						<article>
+							<div class="artigo">
 								<header>
 									<h1><?php the_title();?></h1>
 								</header>
-								
+
 								<nav>
 									<ul>
 										<li><a href="<?php the_Permalink()?>#descricao">O DESTINO</a></li>
@@ -19,7 +19,7 @@
 									</ul>
 								</nav>
 								<section>
-									
+
 								<div class="img-artigo">
 									<?php
 							           $key="img";
@@ -30,22 +30,22 @@
 							            title="<?php the_title();?>" alt="<?php the_title();?>"></a>
 							        <?php }else{}?>
 							    </div>
-							    
+
 							    <p><?php the_excerpt(); ?></p>
 								<a href="<?php the_Permalink()?>"><div class="ver-data">Leia Mais ...</div></a>
-								
-								</section>	
+
+								</section>
 							</div>
 						</article>
 					<?php endwhile; else:?>
-					<?php endif;?> 
-					
+					<?php endif;?>
+
 					<footer>
-						<a href="<?php echo get_settings('home'); ?>"><div class="voltar-footer">INÍCIO</div></a>	
+						<a href="<?php echo get_settings('home'); ?>"><div class="voltar-footer">INÍCIO</div></a>
 						<div class="paginator">
 							<div class="des-anterior">Anterior</div>
 								<div class="wp-pagenavi">
-									
+
 									<!-- <a class="previouspostslink" href="http://tudosobreviagens.hospedagemdesites.ws/?paged=2">Anterior</a> -->
 									<span class="current">1</span>
 									<a class="page smaller" href="http://tudosobreviagens.hospedagemdesites.ws/">2</a>
@@ -56,14 +56,14 @@
 									<a class="nextpostslink" href="http://tudosobreviagens.hospedagemdesites.ws/?paged=4">Próxima</a>
 								</div>
 							<div class="des-proxima">Próxima</div>
-							
+
 						</div>
 					</footer>
-					
+
 				</section>
 			</div>
-			
+
 			<?php get_sidebar();?>
-			
+
 		</section>
 <?php get_footer();?>
