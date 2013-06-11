@@ -250,17 +250,24 @@ section#contain #conteudo .artigo h1 {
 }
 section#contain #conteudo .artigo h2 {
   width: 100%;
-  height: 35px;
+  height: 37px;
+  padding: 10px 0 0 40px;
   margin: 25px 0;
   font-family: arial, verdana;
   font-size: 24px;
-  color: #E05B04;
+  color: white;
   border-bottom: 2px solid #E05B04;
+  float: left;
+  background: url('img/icon.png') no-repeat -1px -553px;
 }
 section#contain #conteudo .artigo h3 {
   margin: 10px 0;
+  font-family: arial, verdana;
+  font-weight: bold;
+  font-style: italic;
   font-size: 15px;
-  color: #04B7E4;
+  color: #0066BD;
+  float: left;
 }
 section#contain #conteudo .artigo p {
   font-family: arial, verdana;
@@ -270,11 +277,16 @@ section#contain #conteudo .artigo p {
   float: left;
   text-align: justify;
 }
+section#contain #conteudo .artigo p a img {
+  float: right;
+}
 section#contain #conteudo .artigo ul {
   display: block;
   font-family: arial, verdana;
   font-size: 14px;
   color: #5E5D5B;
+  margin-right: 20px;
+  overflow: hidden;
 }
 section#contain #conteudo .artigo ul li {
   float: left;
@@ -319,6 +331,48 @@ section#contain #conteudo .artigo .ver-data {
   font-size: 14px;
   color: #fb6300;
   cursor: pointer;
+}
+section#contain #conteudo .artigo #conteudo-post h3 {
+  float: none;
+}
+section#contain #conteudo .artigo #conteudo-post p {
+  float: none;
+  margin-bottom: 10px;
+}
+section#contain #conteudo .artigo #conteudo-post p a img {
+  margin-left: 20px;
+  margin-bottom: 30px;
+  padding: 5px 5px 25px 5px;
+  background-color: #eee;
+}
+section#contain #conteudo .artigo #btns-pdv {
+  margin: 40px 0 20px 0px;
+}
+section#contain #conteudo .artigo #btns-pdv .btn-pedeviagens button {
+  float: left;
+  width: 230px;
+  height: 66px;
+  padding: 2px;
+  background: #ffab37 url('img/icon.png') no-repeat 0px -634px;
+  margin: 0 5px;
+  border: none;
+  font-family: arial, verdana;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+section#contain #conteudo .artigo #btns-pdv .btn-pedeviagens button:hover {
+  background-color: #D67B00;
+}
+section#contain #conteudo .artigo #btns-pdv .btn-pedeviagens#btn-comprar {
+  float: right;
+}
+section#contain #conteudo .artigo #btns-pdv span {
+  float: left;
+  margin: 35px 0 0 70px;
+  font-family: arial;
+  color: #FB6300;
 }
 #aside {
   display: inline;
@@ -376,6 +430,51 @@ section#contain #conteudo .artigo .ver-data {
 #aside section#face td.pls span#u_0_2 {
   font-size: 8px;
 }
+#ir-topo a {
+  text-decoration: none;
+}
+#ir-topo button {
+  display: inline;
+  float: left;
+  width: 940px;
+  margin: 0 10px;
+  margin: 0 auto;
+  display: block;
+  float: none;
+  *zoom: 1;
+  width: 120px;
+  height: 35px;
+  padding-top: 5px;
+  padding-right: 40px;
+  background: #fb6300 url('img/icon.png') no-repeat 80px -450px;
+  color: white;
+  font-family: arial;
+  font-size: 23px;
+  text-align: center;
+  -webkit-border-radius: 15px 15px 0px 0px;
+  border-radius: 15px 15px 0px 0px;
+  border: none;
+  cursor: pointer;
+}
+#ir-topo button:before,
+#ir-topo button:after {
+  content: "";
+  display: table;
+}
+#ir-topo button:after {
+  clear: both;
+}
+#ir-topo button:before,
+#ir-topo button:after {
+  content: "";
+  display: table;
+}
+#ir-topo button:after {
+  clear: both;
+}
+#ir-topo button:hover {
+  background-color: #FF8000;
+}
 /*Categorias*/
 #category .artigo {
   margin-bottom: 40px;
@@ -391,26 +490,6 @@ section#contain #conteudo .artigo .ver-data {
 #category .artigo a:hover {
   text-decoration: underline;
   color: #E05B04;
-}
-#btns-pdv {
-  margin: 40px 0 20px 150px;
-}
-.btn-pedeviagens button {
-  float: left;
-  width: 150px;
-  height: 52px;
-  background: #E15B03;
-  margin: 0 5px;
-  overflow: hidden;
-  border: none;
-  font-family: Conv_tt0288m_, arial, verdana;
-  font-size: 14px;
-  text-align: center;
-  color: white;
-  cursor: pointer;
-}
-.btn-pedeviagens button:hover {
-  background: #2AB3E5;
 }
 #conteudo footer a {
   text-decoration: none;
@@ -601,63 +680,55 @@ section#contain #conteudo .artigo .ver-data {
 /*footer*/
 #footer {
   width: 100%;
-  display: block;
   background: #373737;
-  padding-top: 50px;
+  padding: 40px 0;
+  *zoom: 1;
+}
+#footer:before,
+#footer:after {
+  content: "";
+  display: table;
+}
+#footer:after {
+  clear: both;
+}
+#footer section {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+#footer section h1 {
+  font-family: 'museo500', arial, verdana;
+  font-size: 25px;
+  color: #f4a100;
+  margin-bottom: 20px;
+}
+#footer section p {
+  font-family: arial, verdana;
+  font-size: 12px;
+  color: #f4a100;
+  margin-bottom: 30px;
+}
+#footer section#footer-opcoes {
+  width: 306px;
+  margin-right: 55px;
+}
+#footer section#footer-opcoes ul li {
+  float: left;
+  width: 97px;
+  height: 98px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
   overflow: hidden;
+  background-color: #ccc;
+  margin: 0 5px 5px 0;
 }
-#logo-footer {
-  width: 129px;
-  height: 108px;
-  background: url('img/logo-footer.png') no-repeat;
-  float: left;
-  margin-top: -25px;
-  margin-left: 45px;
+#footer section#footer-servicos {
+  width: 250px;
+  margin-right: 55px;
 }
-#cont-footer {
-  float: left;
-  height: 165px;
-  margin: 0 55px;
-  text-align: right;
-  font-family: Conv_NeoTechStd-Regular, arial, verdana;
-}
-#cont-footer h1 {
-  font-size: 24px;
-  color: white;
-}
-#cont-footer h2 {
-  font-size: 17px;
-  color: #FFD76B;
-}
-#footer ul li a {
-  float: left;
-  color: white;
-  font-family: Conv_MyriadWebPro, arial, verdana;
-  font-size: 14px;
-  margin: 0 20px;
-  text-decoration: none;
-}
-#footer ul li a:hover {
-  color: #E05B04;
-}
-.redes-footer {
-  float: right;
-  margin: 30px 100px 0 0;
-}
-.redes-footer h3 {
-  float: left;
-  margin: 3px 20px 0 0;
-  color: white;
-  font-family: Conv_MyriadWebPro, arial, verdana;
-  font-size: 14px;
-}
-.redes-footer ul {
-  float: left;
-}
-.redes-footer ul li {
-  float: left;
-  margin: 0 2px;
-  cursor: pointer;
+#footer section#footer-contato {
+  width: 250px;
 }
 /* Estilo para paginação */
 div.pagination {

@@ -1,11 +1,11 @@
 <?php get_header();?>
 
-	<div id="contain">
+	<section id="contain">
 		<div id="conteudo">
 			<section>
-				<article>		
+				<article>
 					<div class="artigo">
-						
+
 						<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 						<?php /* If this is a category archive */ if (is_category()) { ?>
 						    Arquivo da Categoria "<?php echo single_cat_title(); ?>"
@@ -34,20 +34,19 @@
 								</nav>
 								<section>
 									<img src="<?php echo get_settings('home'); ?>/<?php $key="VARIAVEL";echo get_post_meta($post->ID,$key,true);?>" alt="">
-									
+
 									<?php the_content();?>
-									
-								</section>	
-						
-						
+
+								</section>
+
 						<?php endwhile; else:?>
 						<?php endif;?>
 					</div>
 				</article>
 			</section>
 		</div>
-		
+
 		<?php get_sidebar();?>
-		
-	</div>
+
+	</section>
 <?php get_footer();?>

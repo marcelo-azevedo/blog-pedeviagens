@@ -1,9 +1,9 @@
 <?php get_header();?>
 
-	<div id="contain">
+	<section id="contain">
 		<div id="conteudo">
 			<section>
-				<article>		
+				<article>
 					<div class="artigo">
 						<?php if (have_posts()): while (have_posts()) : the_post();?>
 							<header>
@@ -19,7 +19,7 @@
 								</ul>
 							</nav>
 							<section>
-								
+
 								<div class="img-artigo">
 									<?php
 							           $key="img";
@@ -33,23 +33,29 @@
 								<div id="conteudo-post">
 									<?php the_content();?>
 								</div>
-								
+
 								<div id="btns-pdv">
-									<div class="btn-pedeviagens"><a href="<?php $key="link-pdv";echo get_post_meta($post->ID,$key,true);?>" target="_blank"><button>VER PACOTE</button></a></div>
-									<div class="btn-pedeviagens"><a href="<?php $key="link-pdv";echo get_post_meta($post->ID,$key,true);?>" target="_blank"><button>COMPRAR</button></a></div>
+									<div id="btn-ver-pacote" class="btn-pedeviagens"><a href="<?php $key="link-pdv";echo get_post_meta($post->ID,$key,true);?>" target="_blank"><button>VER PACOTE</button></a></div>
+									<span>OU</span>
+									<div id="btn-comprar" class="btn-pedeviagens"><a href="<?php $key="link-pdv";echo get_post_meta($post->ID,$key,true);?>" target="_blank"><button>COMPRAR</button></a></div>
 								</div>
-								
-							</section>	
-						
-						
+
+							</section>
+
 						<?php endwhile; else:?>
 						<?php endif;?>
 					</div>
 				</article>
 			</section>
 		</div>
-		
+
 		<?php get_sidebar();?>
-		
+
+	</section>
+	<div id="ir-topo">
+		<a href="#conteudo" class="animate rand">
+			<button>Topo</button>
+		</a>
 	</div>
 <?php get_footer();?>
+
