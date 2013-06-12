@@ -1,16 +1,16 @@
 <?php get_header();?>
 
-<div id="contain">
+<section id="contain">
 	<div id="conteudo">
 		<div id="category">
 			<section>
 					<?php if (have_posts()): while (have_posts()) : the_post();?>
-						<article>		
-							<div class="artigo">	
+						<article>
+							<div class="artigo">
 								<header>
 									<h1><?php the_title();?><span><?php $key="span";echo get_post_meta($post->ID,$key,true);?></span></h1>
 								</header>
-								
+
 								<nav>
 									<ul>
 										<li><a href="<?php the_Permalink()?>#descricao">O DESTINO</a></li>
@@ -21,7 +21,7 @@
 									</ul>
 								</nav>
 								<section>
-									
+
 								<div class="img-artigo">
 									<?php
 							           $key="img";
@@ -32,21 +32,20 @@
 							            title="<?php the_title();?>" alt="<?php the_title();?>"></a>
 							        <?php }else{}?>
 							    </div>
-							        
+
 									<?php the_content();?>
 									<a href="<?php the_Permalink()?>"><div class="ver-data">Ver Mais</div></a>
-								
-								</section>	
+
+								</section>
 							</div>
 						</article>
 					<?php endwhile; else:?>
-					<?php endif;?> 
-					
+					<?php endif;?>
+
 				</section>
 		</div>
 	</div>
-	
+
 	<?php get_sidebar();?>
-	
-</div>
+</section>
 <?php get_footer();?>

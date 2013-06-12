@@ -1,25 +1,34 @@
-	<div id="footer">
-		<footer>
-			<div class="center">
-				<div id="logo-footer"></div>
-				<div id="cont-footer">
-					
-					<h2>atendimento@tudosobreviagens.com.br</h2>
-				</div>
-				<nav>
-					<ul>
-						<li><a href="">INÍCIO</a></li>
-						<?php wp_list_pages('title_li=');?>
-					</ul>
-				</nav>
-				<div class="redes-footer">
-					
-				</div>
-			</div>
-		</footer>
-	</div>
+	<footer id="footer">
+		<div class="center">
+			<section id="footer-opcoes">
+				<h1>Mais opções para você</h1>
+				<ul>
+					<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/teste.png" alt=""></a></li>
+					<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/teste.png" alt=""></a></li>
+					<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/teste.png" alt=""></a></li>
+					<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/teste.png" alt=""></a></li>
+					<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/teste.png" alt=""></a></li>
+					<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/teste.png" alt=""></a></li>
+				</ul>
+			</section>
+			<section id="footer-servicos">
+				<h1>Nossos serviços</h1>
+				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit</p>
+				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit</p>
+			</section>
+			<section id="footer-contato">
+				<h1>Contato</h1>
+				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit</p>
+				<p>
+					Tel: 00000000000 <br />
+					Endereço: This is Photoshop's <br />
+					atendimento@tudosobreviagens.com.br <br />
+				</p>
+			</section>
+		</div>
+	</footer>
 
-	
+
 <script type="text/javascript" >
 jQuery(function($){
 	$('.classBtoTopo a').click(function () {
@@ -38,7 +47,7 @@ var animate = {
 };
 
 </script>
-	
+
 <?php wp_footer(); ?>
 
 <script type="text/javascript">

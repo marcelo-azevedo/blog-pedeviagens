@@ -1,24 +1,22 @@
 <?php get_header();?>
 
-	<div id="contain">
+	<section id="contain">
 		<div id="conteudo">
 			<div id="page">
 				<section>
-					<article>		
+					<article>
 						<div class="artigo">
 							<?php if (have_posts()): while (have_posts()) : the_post();?>
 								<header>
 									<h1><?php the_title();?></h1>
 								</header>
-									
+
 									<section>
-										
-										
+
 										<?php the_content();?>
-										
-									</section>	
-							
-							
+
+									</section>
+
 							<?php endwhile; else:?>
 							<?php endif;?>
 						</div>
@@ -26,8 +24,8 @@
 				</section>
 			</div>
 		</div>
-		
+
 		<?php get_sidebar();?>
-		
-	</div>
+
+	</section>
 <?php get_footer();?>
