@@ -27,12 +27,12 @@
 			<h1>NOSSA FANPAGE</h1>
 			<div class="fb-follow" data-href="http://www.facebook.com/pages/Blog-Tudo-Sobre-Viagens/513588051994297?fref=ts" data-show-faces="false" data-font="lucida grande" data-width="200"></div>		</section>
 
-		<section>
-			<a href="#"><button id="facebook"></button></a>
+		<section id="btn-face">
+			<a href="#"><button id="facebook">Conecte-se</button></a>
 		</section>
 
-		<section>
-			<a href="#"><button id="documentos"></button></a>
+		<section id="documentacao">
+			<a href="#">Documentos Necessários</a>
 		</section>
 
 	</aside>

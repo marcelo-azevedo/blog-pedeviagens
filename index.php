@@ -41,21 +41,16 @@
 					<?php endif;?>
 
 					<footer>
-						<a href="<?php echo get_settings('home'); ?>"><div class="voltar-footer">INÍCIO</div></a>
 						<div class="paginator">
-							<div class="des-anterior">Anterior</div>
 								<div class="wp-pagenavi">
 
-									<!-- <a class="previouspostslink" href="http://tudosobreviagens.hospedagemdesites.ws/?paged=2">Anterior</a> -->
 									<span class="current">1</span>
 									<a class="page smaller" href="http://tudosobreviagens.hospedagemdesites.ws/">2</a>
 									<a class="page smaller" href="http://tudosobreviagens.hospedagemdesites.ws/?paged=2">3</a>
 									<a class="page larger" href="http://tudosobreviagens.hospedagemdesites.ws/?paged=4">4</a>
 									<a class="page larger" href="http://tudosobreviagens.hospedagemdesites.ws/?paged=5">5</a>
 									<a class="page larger" href="http://tudosobreviagens.hospedagemdesites.ws/?paged=6">6</a>
-									<a class="nextpostslink" href="http://tudosobreviagens.hospedagemdesites.ws/?paged=4">Próxima</a>
 								</div>
-							<div class="des-proxima">Próxima</div>
 
 						</div>
 					</footer>
