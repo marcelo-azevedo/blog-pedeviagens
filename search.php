@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-<div id="contain">
+<section id="contain">
 	<section id="conteudo">
 		<div id="category">
 			<section>
@@ -22,5 +22,5 @@
 
 	<?php get_sidebar();?>
 
-</div>
+</section>
 <?php get_footer();?>
