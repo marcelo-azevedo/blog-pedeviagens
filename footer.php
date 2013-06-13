@@ -3,12 +3,11 @@
 			<section id="footer-opcoes">
 				<h1>Mais opções para você</h1>
 				<ul>
-					<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/teste.png" alt=""></a></li>
-					<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/teste.png" alt=""></a></li>
-					<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/teste.png" alt=""></a></li>
-					<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/teste.png" alt=""></a></li>
-					<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/teste.png" alt=""></a></li>
-					<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/teste.png" alt=""></a></li>
+					<?php query_posts('showposts=6&category_name=destaques');?>
+	                <?php if (have_posts()): while (have_posts()) : the_post();?>
+						<li><a href="<?php the_Permalink()?>"><?the_post_thumbnail()?></a><span><?php the_title();?></span></li>
+					<?php endwhile; else:?>
+	                <?php endif;?> 
 				</ul>
 			</section>
 			<section id="footer-servicos">
